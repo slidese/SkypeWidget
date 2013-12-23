@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SkypeWidget</string>
+    <string name="ok">OK</string>
+    <string name="user">User</string>
+    <string name="description">Enter the Skype user\'s name</string>
+    <string name="username">Username</string>
+
+</resources>
