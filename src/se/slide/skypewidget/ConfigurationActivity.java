@@ -1,6 +1,7 @@
 
 package se.slide.skypewidget;
 
+import com.crashlytics.android.Crashlytics;
 import android.app.Activity;
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
@@ -25,6 +26,7 @@ public class ConfigurationActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Crashlytics.start(this);
         setContentView(R.layout.activity_configuration);
         
         setResult(RESULT_CANCELED);
