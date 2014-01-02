@@ -5,6 +5,7 @@
     android:minWidth="20dp"
     android:updatePeriodMillis="300000"
     android:configure="se.slide.skypewidget.ConfigurationActivity"
+    android:resizeMode="horizontal|vertical"
     android:widgetCategory="keyguard|home_screen">  
 
 </appwidget-provider>
