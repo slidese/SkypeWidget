@@ -2,6 +2,8 @@
 package se.slide.skypewidget;
 
 import com.crashlytics.android.Crashlytics;
+import com.google.analytics.tracking.android.EasyTracker;
+
 import android.app.Activity;
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
@@ -77,6 +79,18 @@ public class ConfigurationActivity extends Activity {
         }
         
         return super.onMenuItemSelected(featureId, item);
+    }
+    
+    @Override
+    public void onStart() {
+      super.onStart();
+      EasyTracker.getInstance(this).activityStart(this);
+    }
+
+    @Override
+    public void onStop() {
+      super.onStop();
+      EasyTracker.getInstance(this).activityStop(this);
     }
     
     // Read the prefix from the SharedPreferences object for this widget.

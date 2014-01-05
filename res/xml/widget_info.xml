@@ -6,7 +6,7 @@
     android:updatePeriodMillis="300000"
     android:configure="se.slide.skypewidget.ConfigurationActivity"
     android:resizeMode="horizontal|vertical"
-    android:previewImage="@drawable/widget_preview"
+    android:previewImage="@drawable/skypewidget_ori_portrait"
     android:widgetCategory="keyguard|home_screen">  
 
 </appwidget-provider>
