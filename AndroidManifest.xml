@@ -61,6 +61,10 @@
             
         </activity>
         
+        <service
+            android:enabled="true"
+            android:name="se.slide.skypewidget.SkypeLauncherIntentService" />
+        
     </application>
 
 </manifest>
