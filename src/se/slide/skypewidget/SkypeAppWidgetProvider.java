@@ -30,14 +30,16 @@ public class SkypeAppWidgetProvider extends AppWidgetProvider {
         final RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
         views.setTextViewText(R.id.username, username);
         
-        //Intent sky = new Intent("android.intent.action.VIEW");
-        //sky.setData(Uri.parse("skype:" + username + "?call&video=true"));
-        
         Intent serviceIntent = new Intent(context, SkypeLauncherIntentService.class);
         serviceIntent.putExtra(SkypeLauncherIntentService.USERNAME, username);
             
-        final PendingIntent pendingIntent = PendingIntent.getService(context, 0, serviceIntent, 0); //PendingIntent.getActivity(this, 0, myIntent, 0);
-        views.setOnClickPendingIntent(R.id.layout, pendingIntent);    
+        PendingIntent pendingIntent = PendingIntent.getService(context, appWidgetId, serviceIntent, 0);
+        pendingIntent.cancel(); // We need to cancel the last pending intent first
+        views.setOnClickPendingIntent(R.id.layout, pendingIntent);
+        
+        // Now set the correct/latest pending intent
+        pendingIntent = PendingIntent.getService(context, appWidgetId, serviceIntent, 0);
+        views.setOnClickPendingIntent(R.id.layout, pendingIntent);
         
         // Tell the widget manager
         appWidgetManager.updateAppWidget(appWidgetId, views);
