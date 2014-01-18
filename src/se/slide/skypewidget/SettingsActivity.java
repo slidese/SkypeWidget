@@ -251,6 +251,8 @@ public class SettingsActivity extends PreferenceActivity {
      */
     private void setupSimplePreferencesScreen() {
 
+        getActionBar().setTitle(R.string.pref_header_about);
+        
         // Add preferences.
         addPreferencesFromResource(R.xml.pref_about);
         
