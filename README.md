@@ -38,8 +38,8 @@ It's perfect for people who need a home screen with easy direct call actions.
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 [1]: https://plus.google.com/113216017223819971202/
-[2]: https://raw.github.com/slidese/Timy/master/Screenshot_2013-12-23-01-31-58.png
+[2]: https://raw.github.com/slidese/SkypeWidget/master/Screenshot_2013-12-23-01-31-58.png
 [3]: http://www.android.com/images/brand/get_it_on_play_logo_small.png
 [4]: https://play.google.com/store/apps/details?id=se.slide.skypewidget
 [5]: http://www.slide.se
-[6]: https://raw.github.com/slidese/Timy/master/Screenshot_2013-12-23-01-31-13.png
+[6]: https://raw.github.com/slidese/SkypeWidget/master/Screenshot_2013-12-23-01-31-13.png
