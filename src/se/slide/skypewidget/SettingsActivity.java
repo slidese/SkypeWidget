@@ -55,6 +55,8 @@ public class SettingsActivity extends PreferenceActivity {
     
     // (arbitrary) request code for the purchase flow
     static final int RC_REQUEST = 10001;
+    
+    boolean mBillingSetupDone = false;
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
@@ -73,6 +75,8 @@ public class SettingsActivity extends PreferenceActivity {
          * want to make it easy for an attacker to replace the public key with one
          * of their own and then fake messages from the server.
          */
+        
+        mBillingSetupDone = false;
         
         /* 
          * We will ignore the advice given above because this is an open source app; you may what you wish with the code :)
@@ -98,6 +102,7 @@ public class SettingsActivity extends PreferenceActivity {
                 // Have we been disposed of in the meantime? If so, quit.
                 if (mHelper == null) return;
 
+                mBillingSetupDone = true;
             }
         });
         
@@ -149,6 +154,9 @@ public class SettingsActivity extends PreferenceActivity {
      * 
      */
     public void onDonateButtonClicked(String sku) {
+        
+        if (!mBillingSetupDone)
+            alert(getString(R.string.no_billing_setup));
 
         /* TODO: for security, generate your payload here for verification. See the comments on
          *        verifyDeveloperPayload() for more info. Since this is a SAMPLE, we just use

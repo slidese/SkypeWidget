@@ -7,6 +7,7 @@
     <string name="user">User</string>
     <string name="description">Enter the Skype user\'s name</string>
     <string name="username">Username</string>
+    <string name="no_billing_setup">Thank you for clicking to donate! :) However something went wrong with the Google payment. Please make sure you have installed any Google updates for your phone.</string>
 
     <!-- Settings for About -->
     <string name="pref_header_about">About</string>
