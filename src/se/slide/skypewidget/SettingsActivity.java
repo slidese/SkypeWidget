@@ -121,13 +121,13 @@ public class SettingsActivity extends PreferenceActivity {
       EasyTracker.getInstance(this).activityStop(this);  // Add this method.
     }
     
- // We're being destroyed. It's important to dispose of the helper here!
+    // We're being destroyed. It's important to dispose of the helper here!
     @Override
     public void onDestroy() {
         super.onDestroy();
 
         // very important:
-        if (mHelper != null) {
+        if (mHelper != null && mBillingSetupDone) {
             mHelper.dispose();
             mHelper = null;
         }
@@ -155,8 +155,10 @@ public class SettingsActivity extends PreferenceActivity {
      */
     public void onDonateButtonClicked(String sku) {
         
-        if (!mBillingSetupDone)
+        if (!mBillingSetupDone) {
             alert(getString(R.string.no_billing_setup));
+            return;
+        }
 
         /* TODO: for security, generate your payload here for verification. See the comments on
          *        verifyDeveloperPayload() for more info. Since this is a SAMPLE, we just use
