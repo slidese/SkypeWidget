@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SkypeWidget.iml" filepath="$PROJECT_DIR$/SkypeWidget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidUtils/androidUtils.iml" filepath="$PROJECT_DIR$/androidUtils/androidUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/skypeWidget/skypeWidget.iml" filepath="$PROJECT_DIR$/skypeWidget/skypeWidget.iml" />
+    </modules>
+  </component>
+</project>
+
